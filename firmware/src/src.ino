@@ -68,7 +68,7 @@
          units = C,C,%,V,p
   */
 // -------------------------------------------------------------------------------------------------------------
-#define NUM_EXTERNAL_TEMP_SENSORS 1                                    // Specify number of external temperature sensors that are connected.
+#define NUM_EXTERNAL_TEMP_SENSORS 6                                    // Specify number of external temperature sensors that are connected.
                                                
 boolean debug=1;                                                       // Set to 1 to few debug serial output
 boolean flash_led=0;                                                   // Flash LED after each sample (battery drain) default=0
@@ -91,7 +91,8 @@ boolean RF_STATUS;
 
 
 byte RF_freq=RF12_433MHZ;                                              // Frequency of RF12B module can be RF12_433MHZ, RF12_868MHZ or RF12_915MHZ. You should use the one matching the module you have.
-byte nodeID = 23;                                                      // EmonTH temperature RFM12B node ID - should be unique on network
+// this is the base + 2 bit DIP switch
+byte nodeID = 27;                                                      // EmonTH temperature RFM12B node ID - should be unique on network
 int networkGroup = 210;                                                // EmonTH RFM12B wireless network group - needs to be same as emonBase and emonGLCD
                                                                        // DS18B20 resolution 9,10,11 or 12bit corresponding to (0.5, 0.25, 0.125, 0.0625 degrees C LSB),
                                                                        // lower resolution means lower power

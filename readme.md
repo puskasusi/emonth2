@@ -1,6 +1,16 @@
 # emonTH V2.0
 
-[![Build Status](https://travis-ci.org/openenergymonitor/emonth2.svg?branch=master)](https://travis-ci.org/openenergymonitor/emonth2)
+Modified firmware with max 6 external sensors and base node ID set to 27. So DIP switches can be used to set the node ID from 27 to 30.
+
+emonhub config:
+
+    [[27]]
+        nodename = emonth9
+        [[[rx]]]
+           names = temperature, temp1, temp2, temp3, temp4, temp5, temp6, humidity, battery, pulsecount
+           datacodes = h,h,h,h,h,h,h,h,h,L
+           scales = 0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,1
+           units = C,C,C,C,C,C,C,%,V,p
 
 **Low power wireless temperature and humidity node**
 
